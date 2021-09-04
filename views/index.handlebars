@@ -1,0 +1,25 @@
+
+<section class="py-2">
+    <div class="row">
+      <div class="col-md-6 text-center">
+          <h2 class="display-3 mt-3 pt-5">
+             7 Habits of Highly Effective People
+          </h2>
+          <p class="lead">learn very important lessons for your life</p>
+          <form action="/charge" method="POST">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key='{{stripePublishableKey}}'
+                data-amount="2500" data-name="7-habits" data-description="book writen by stephen covey"
+                data-image="/img/marketplace.jpg" data-locale="auto">
+                </script>
+                <script>
+                    //hide default stripe button
+                    document.getElementsByClassName('stripe-button-el')[0].style.display="none";
+                </script>
+               <button type="submit" class="btn btn-dark btn-lg">Purchase for $25</button>
+          </form>
+      </div>
+      <div class="col-md-6 pt-5 d-flex justify-content-center ">
+          <img src="/img/7habits.png" alt="" class="img-fluid">
+      </div>
+    </div>
+</section>
